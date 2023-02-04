@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+
+<body>
+    <div>
+        <div class="container bg-primary ">
+
+            <div class="  form-group row text-light px-5 py-5 ">
+                <div class="">
+
+                    <h3>Bài 1: Viết chương trình tính tiền lương nhân viên</h3>
+                    <p>Lương một ngày: 100.000</p>
+                </div>
+                <hr />
+                <div class="col-4">
+                    <p>Nhập số ngày làm:</p>
+                    <input id="soNgayLam" class="form-control w-50" />
+                </div>
+                <div class="mt-3">
+                    <button class="btn btn-danger" onclick="tinhTienLuong()" id="btnTinhTienLuong">Nhập</button>
+                </div>
+                <div class="mt-2 alert alert-success ">
+                    <p class="mt-2">Tổng tiền lương: <span id="tongTienLuong"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-4">
+        <div class="container bg-success ">
+            <div class="px-5 py-5">
+                <h3>Bài 2: tính giá trị trung bình</h3>
+                <div class="mt-4 d-flex gap-5   ">
+                    <input placeholder="Nhập số thứ nhất" id="soThuNhat" />
+                    <input placeholder="Nhập số thứ hai" id="soThuHai" />
+                    <input placeholder="Nhập số thứ ba" id="soThuBa" />
+                    <input placeholder="Nhập số thứ tư" id="soThuTu" />
+                    <input placeholder="Nhập số thứ năm" id="soThuNam" />
+                </div>
+                <button class="btn btn-danger px-4 mt-2" onclick="tinhDiemTrungBinh()"
+                    id="btnTinhDiemTrungBinh">Nhập</button>
+                <div class="mt-2 alert alert-success   ">
+                    <p class="mt-2">Tính Điểm Trung Bình: <span id="diemTrungBinh"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-4">
+        <div class="container bg-primary">
+            <div class="px-5 py-5 text-light">
+                <h3>Bài 3: Quy đổi tiền </h3>
+                <p>Giá USD hiện nay là: 23.000VND</p>
+                <div>
+                    <p>Nhập vào số tiền</p>
+                    <input placeholder="USD" id="nhapUSD" class="form-control w-25" />
+                </div>
+                <button class="btn btn-danger px-4 mt-2" onclick="quyDoiTien()" id="btnQuyDoiTien">Nhập</button>
+                <div class="mt-2 alert alert-success   ">
+                    <p class="mt-2">Quy đổi: <span id="quyDoiTien">VND</span></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="mt-4">
+        <div class="container bg-success">
+            <div class="px-5 py-5 text-light">
+                <h3>Bài4: Tính chu vi, Diện tích hình chữ nhật</h3>
+                <div class="mt-3">
+                    <input id="chieuDai" class="form-control w-50" placeholder="Nhập chiều dài " />
+                    <input id="chieuRong" class="form-control mt-2 w-50" placeholder="Nhập chiều rộng " />
+                </div>
+                <button class="btn btn-danger mt-2" onclick="tinhChieuDaiChieuRong()" id="btnTinh">Nhập</button>
+                <div class="row gap-3 mx-1">
+                    <div class="mt-2 alert alert-success w-25  ">
+                        <p class="mt-2">Chiều Dài: <span id="chuVi"></span></p>
+                    </div>
+                    <div class="mt-2 alert alert-success w-25   ">
+                        <p class="mt-2">Chiều rộng: <span id="dienTich"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-4">
+        <div class="container bg-primary">
+            <div class="px-5 py-5 text-light">
+                <h3>Bài 5: Tính tổng 2 kí số</h3>
+                <input id="soTuNhien" class="form-control w-50" placeholder="Nhập vào 1 số " />
+                <button class="btn btn-danger mt-2" onclick="tinhTong2KiSo()" id="btnTinhTong2KiSo">Nhập</button>
+                <div class="mt-2 alert alert-success w-50   ">
+                    <p class="mt-2">Tổng 2 Kí Số : <span id="tong2So"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+    <script src="/js/index.js"></script>
+</body>
+
+</html>
